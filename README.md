@@ -49,7 +49,7 @@ Explanation:
 
 Converts .png images to quilt format using the RGBDToQuilt.exe.
 Parallel processing speeds up the conversion process by running multiple instances simultaneously.
-Step 2: Generate Missing Quilt Frames
+##Step 2: Generate Missing Quilt Frames
 File: Gen Missing Quilt.linq
 
 This script identifies and generates any missing quilt frames in the sequence. I found that the first script would miss frames. Perhaps the conversion failed on a few.
@@ -94,7 +94,7 @@ Explanation:
 
 Scans the source directory for missing quilt frames.
 Re-generates missing frames using the same RGBDToQuilt.exe tool.
-Step 3: Convert Quilt Images to Video
+##Step 3: Convert Quilt Images to Video
 File: Convert Quilt To Video.linq
 
 This script uses FFmpeg to combine the quilt images into a video with an audio track.
