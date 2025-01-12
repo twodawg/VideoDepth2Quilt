@@ -16,7 +16,6 @@ Ensure the following tools are installed and accessible:
 ---
 
 ## Step 1: Convert Images to Quilt
-**File:** `Convert Images To Quilt First Pass.linq`
 
 This LINQPad script processes a folder of depth images and converts them into quilt images using the `RGBDToQuilt.exe` tool from the **NullEngine-Bridge** repository.
 
@@ -52,8 +51,7 @@ Parallel processing speeds up the conversion process by running multiple instanc
 
 ---
 
-##Step 2: Generate Missing Quilt Frames
-File: Gen Missing Quilt.linq
+## Step 2: Generate Missing Quilt Frames
 
 This script identifies and generates any missing quilt frames in the sequence. I found that the first script would miss frames. Perhaps the conversion failed on a few.
 
@@ -100,8 +98,7 @@ Re-generates missing frames using the same RGBDToQuilt.exe tool.
 
 ---
 
-##Step 3: Convert Quilt Images to Video
-File: Convert Quilt To Video.linq
+## Step 3: Convert Quilt Images to Video
 
 This script uses FFmpeg to combine the quilt images into a video with an audio track.
 
