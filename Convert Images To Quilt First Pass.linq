@@ -18,7 +18,7 @@ var quiltExePath = @"C:\Projects\NullEngine-Bridge\RGBDToQuilt\publish\RGBDToQui
 // Foreach image in sourcePath call quiltExePath with the --input argument as the image filename specify the arg --output to quilt, using a parallel foreach using 16 threads
 var images = Directory.GetFiles(sourcePath, "*.png");
 
-Parallel.ForEach(images, new ParallelOptions { MaxDegreeOfParallelism = 8 }, async image =>
+Parallel.ForEach(images, new ParallelOptions { MaxDegreeOfParallelism = 8 }, image =>
 {
 	var outputFileName = Path.Combine(sourcePath, "quilt", Path.GetFileName(image));
 	var process = new Process
