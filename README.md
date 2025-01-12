@@ -52,7 +52,7 @@ Parallel processing speeds up the conversion process by running multiple instanc
 Step 2: Generate Missing Quilt Frames
 File: Gen Missing Quilt.linq
 
-This script identifies and generates any missing quilt frames in the sequence.
+This script identifies and generates any missing quilt frames in the sequence. I found that the first script would miss frames. Perhaps the conversion failed on a few.
 
 ```csharp
 var sourcePath = @"c:\\Projects\\DepthAnyVideo\\outputs\\Mina6\\";
@@ -81,7 +81,7 @@ foreach (var missingImage in missingFiles)
         StartInfo = new ProcessStartInfo
         {
             FileName = quiltExePath,
-            Arguments = $"--input \"{image}\" --output \"{outputFileName}\" --columns 5 --rows 9",
+            Arguments = $"--input \"{image}\" --output \"{outputFileName}\" --columns 5 --rows 9 --depthiness 1.9",
             UseShellExecute = false,
             CreateNoWindow = true
         }
@@ -124,34 +124,3 @@ Explanation:
 
 Uses FFmpeg to create a 30 FPS video using quilt images.
 The audio track is included for synchronized playback.
-Step 4: Customizing Quilt Generation Parameters
-You can adjust the quilt generation parameters in the RGBDToQuilt.exe command:
-
-Columns & Rows: The grid dimensions for quilt generation.
-Depthiness: Controls the intensity of depth rendering.
-Example Modification:
-
-
-RGBDToQuilt.exe --input "frame.png" --output "quilt.png" --columns 8 --rows 8 --depthiness 2.5
-Step 5: Reference to NullEngine-Bridge
-The RGBDToQuilt.exe tool is part of the NullEngine-Bridge project.
-
-How to Use:
-Download from GitHub:
-bash
-Copy code
-git clone https://github.com/NullandKale/NullEngine-Bridge.git
-Build:
-bash
-Copy code
-dotnet publish -c Release
-Reference the Executable: Ensure the path to RGBDToQuilt.exe is correctly set in the scripts.
-Final Workflow Summary:
-Convert Images to Quilt: Process depth video frames into quilt images.
-Generate Missing Frames: Fill in missing quilt frames.
-Convert to Video: Compile quilt frames into a video with audio using FFmpeg.
-Customize Settings: Adjust columns, rows, and depthiness for optimal results.
-✅ Troubleshooting Tips:
-Ensure FFmpeg and RGBDToQuilt.exe paths are correct.
-Verify proper image naming conventions (000001.png, 000002.png, ...).
-Adjust the MaxDegreeOfParallelism for faster processing on powerful systems.
