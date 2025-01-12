@@ -27,7 +27,7 @@ var quiltExePath = @"C:\\Projects\\NullEngine-Bridge\\RGBDToQuilt\\publish\\RGBD
 var images = Directory.GetFiles(sourcePath, "*.png");
 
 // Parallel processing for faster conversion
-Parallel.ForEach(images, new ParallelOptions { MaxDegreeOfParallelism = 8 }, async image =>
+Parallel.ForEach(images, new ParallelOptions { MaxDegreeOfParallelism = 8 }, image =>
 {
     var outputFileName = Path.Combine(sourcePath, "quilt", Path.GetFileName(image));
     var process = new Process
