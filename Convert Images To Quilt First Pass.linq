@@ -10,8 +10,6 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-#load "LookingGlassSDK"
-
 var sourcePath = @"c:\Projects\DepthAnyVideo\outputs\Mina6\";
 var quiltExePath = @"C:\Projects\NullEngine-Bridge\RGBDToQuilt\publish\RGBDToQuilt.exe";
 
