@@ -12,7 +12,7 @@ Ensure the following tools are installed and accessible:
 - OpenCVSharp4 (NuGet Package)
 - OpenTK (NuGet Package)
 - [NullEngine-Bridge](https://github.com/NullandKale/NullEngine-Bridge) for quilt image generation.
--- Follow Mina at https://www.youtube.com/@mina-bass
+- Follow Mina at https://www.youtube.com/@mina-bass
 
 ---
 
