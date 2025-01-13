@@ -9,8 +9,6 @@ This tutorial guides you through converting depth video frames into a quilt vide
 Ensure the following tools are installed and accessible:
 
 - [FFmpeg](https://ffmpeg.org/download.html) for video encoding.
-- OpenCVSharp4 (NuGet Package)
-- OpenTK (NuGet Package)
 - [NullEngine-Bridge](https://github.com/NullandKale/NullEngine-Bridge) for quilt image generation.
 - https://github.com/Nightmare-n/DepthAnyVideo to generate depth images from any 2D video
 - Follow Mina at https://www.youtube.com/@mina-bass
